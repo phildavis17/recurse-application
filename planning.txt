@@ -55,7 +55,7 @@ INPUT
 
 
 
- COMPACT
+ SMALL
 
   123
   456

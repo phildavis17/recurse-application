@@ -129,6 +129,16 @@ class TicTacToeInterface:
     def _input_is_valid(cls, user_input: str) -> bool:
         pass
 
+    @classmethod
+    def _generate_board_string_small(game_state: str) -> str:
+        """Returns a string representing the current game state using the small format."""
+        pass
+
+    @classmethod
+    def _generate_boad_string_large(game_state: str) -> str:
+        """Returns a string representing the current game state using the large format."""
+        pass
+
     @staticmethod
     def generate_win_message(win: tuple) -> str:
         player, line, turns = win
