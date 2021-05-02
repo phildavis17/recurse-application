@@ -1,0 +1,102 @@
+GAME determines which player is next
+GAME requests NEXT_PLAYER'S new turn from INTERFACE
+INTERFACE tells OUTPUT to draw the current game state
+INTERFACE tells OUTPUT to prompt a new turn from NEXT_PLAYER
+INPUT grabs and parses NEXT_PLAYER's entry
+INPUT passes turn to INTERFACE
+INTERFACE passes turn to GAME
+GAME passes turn to BOARD
+BOARD advances the game state
+BOARD checks for win conditions
+
+-if win condition is found:
+BOARD reports win to GAME
+GAME creates an end-of-game report
+GAME tells INTERFACE to present the end-of-game report
+INTERFACE tells OUTPUT to present end-of-game report
+GAME OVER 
+
+-if WIN condition is not found:
+BOARD checks for draw conditions
+
+-if draw condition is found:
+BOARD reports draw to GAME
+GAME creates a draw description
+GAME tells INTERFACE to present a draw screen
+INTERFACE tells OUTPUT to present draw screen
+GAME OVER
+
+-if draw condition is not found:
+GAME dtermines which player is next...
+
+
+GAME
+ - get the next player
+ - request a new turn
+ - end game
+
+BOARD
+ - advance game state
+ - check for end-of-game condition
+
+INTERFACE
+ - prompt (output something and get input)
+ - show(output something)
+
+
+OUTPUT
+ - Draw the current game state
+ - Prompt for NEXT_PLAYER's turn
+ - Display end-of-game report
+
+INPUT
+ - get turn input
+ - validate turn input
+
+
+
+ COMPACT
+
+  123
+  456
+  789
+
+  OX3
+  456
+  789
+
+  ---
+  456
+  789
+
+  \23
+  4\6
+  78\
+
+
+BIG
+   
+  ╭─╮┃╲ ╱┃
+  │ │┃ ╳ ┃ 3
+  ╰─╯┃╱ ╲┃
+  ━━━╋━━━╋━━━
+     ┃   ┃
+   4 ┃ 5 ┃ 6
+     ┃   ┃
+  ━━━╋━━━╋━━━
+     ┃   ┃
+   7 ┃ 8 ┃ 9
+     ┃   ┃
+
+
+  ╭─╮┃╲ ╱┃
+  ───────────
+  ╰─╯┃╱ ╲┃
+  ━━━╋━━━╋━━━
+     ┃   ┃
+   4 ┃ 5 ┃ 6
+     ┃   ┃
+  ━━━╋━━━╋━━━
+     ┃   ┃
+   7 ┃ 8 ┃ 9
+     ┃   ┃
